@@ -46,6 +46,7 @@ public class Juego extends JPanel implements ActionListener {
 
         //----------------se crea el panel superior
         botonesSuperiores = new JPanel();
+        botonesSuperiores.setBackground(Color.lightGray);
         botonesSuperiores.setLayout(new FlowLayout());
 
         botonesAMostrar = new JButton[5];
@@ -63,6 +64,8 @@ public class Juego extends JPanel implements ActionListener {
                     ponerImagenes++;
                     JButton boton = (JButton) e.getSource();
 
+                    Abecedario.sonidoletra((ImageIcon) boton.getIcon());
+
                     JOptionPane.showMessageDialog(Juego.this, "Esto es " +
                                     Abecedario.abecedarioInvertido.get(boton.getIcon()),
                             "Letra", JOptionPane.ERROR_MESSAGE, boton.getIcon());
@@ -77,6 +80,7 @@ public class Juego extends JPanel implements ActionListener {
         }
 
         botonesInferiores = new JPanel();
+        botonesInferiores.setBackground(Color.lightGray);
         botonesInferiores.setLayout(new GridLayout(4,5,8,8));
 
         botones =  new JButton[respuestas.length];
@@ -162,6 +166,7 @@ public class Juego extends JPanel implements ActionListener {
 
         //----------------se crea el panel superior
         botonesSuperiores = new JPanel();
+        botonesSuperiores.setBackground(Color.lightGray);
         botonesSuperiores.setLayout(new FlowLayout());
 
         botonesAMostrar = new JButton[6];
@@ -181,6 +186,7 @@ public class Juego extends JPanel implements ActionListener {
                     ponerImagenes++;
                     JButton boton = (JButton) e.getSource();
 
+                    Abecedario.sonidoletra((ImageIcon) boton.getIcon());
                     JOptionPane.showMessageDialog(Juego.this, "Esto es " +
                                     Abecedario.abecedarioInvertido.get(boton.getIcon()),
                             "Letra", JOptionPane.ERROR_MESSAGE, boton.getIcon());
@@ -194,6 +200,7 @@ public class Juego extends JPanel implements ActionListener {
         }
 
         botonesInferiores = new JPanel();
+        botonesInferiores.setBackground(Color.lightGray);
         botonesInferiores.setLayout(new GridLayout(4,5,8,8));
 
         botones =  new JButton[respuestas.length];
@@ -211,6 +218,7 @@ public class Juego extends JPanel implements ActionListener {
                             boton.getIcon().equals(respuestas[2]) || boton.getIcon().equals(respuestas[3]) ||
                             boton.getIcon().equals(respuestas[4]) || boton.getIcon().equals(respuestas[5]))
                     {
+                        Abecedario.sonidoletra((ImageIcon) boton.getIcon());
                         boton.setEnabled(false);
                         boton.setBackground(Color.GREEN);
                         respuestasCorrectas++;
@@ -226,6 +234,7 @@ public class Juego extends JPanel implements ActionListener {
                     }
                     else
                     {
+                        Abecedario.sonidoletra((ImageIcon) boton.getIcon());
                         boton.setEnabled(false);
                         boton.setBackground(Color.RED);
                         respuestasIncorrectas++;

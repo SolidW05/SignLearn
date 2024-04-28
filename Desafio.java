@@ -21,12 +21,16 @@ public class Desafio extends JPanel {
         respuestas = new ImageIcon[largo * ancho];
 
         botonesInferiores = new JPanel();
+        botonesInferiores.setBackground(Color.lightGray);
         botonesInferiores.setLayout(new GridLayout(largo,ancho,8,8));
 
         panelAciertos = new JPanel(new FlowLayout());
+        panelAciertos.setBackground(Color.lightGray);
 
         numeroAciertos = new JTextField("El numero de aciertos es: " + aciertos);
         numeroAciertos.setFont(new Font("Ink Free", Font.BOLD, 30));
+        numeroAciertos.setBackground(Color.darkGray);
+        numeroAciertos.setForeground(Color.GREEN);
         numeroAciertos.setBorder(BorderFactory.createBevelBorder(1));
         numeroAciertos.setHorizontalAlignment(JTextField.CENTER);
         numeroAciertos.setEditable(false);
@@ -65,6 +69,7 @@ public class Desafio extends JPanel {
                         boton.setBackground(Color.RED);
                     }
 
+                    Abecedario.sonidoletra((ImageIcon) boton.getIcon());
                     botonesPresionados++;
 
                     if (botonesPresionados == respuestas.length){

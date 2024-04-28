@@ -18,15 +18,15 @@ public class Inicio extends JFrame {
         setResizable(false);
 
         inicio = new JPanel(null);
+        inicio.setBackground(Color.lightGray);
+
         inferior = new JPanel(new FlowLayout());
-
-
-
-
+        inferior.setBackground(Color.darkGray);
 
         aprender = new JButton("Aprender");
-        aprender.setBounds(500,200, 180, 50);
-        aprender.setFont(new Font("MV Boli",Font.PLAIN,25));
+        aprender.setBounds(462,300, 280, 90);
+        aprender.setFont(new Font("Ink Free", Font.BOLD, 60));
+        aprender.setBackground(Color.orange);
         aprender.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -47,6 +47,7 @@ public class Inicio extends JFrame {
                 grupo.add(vZ);
 
                 aprenderPanelSuperior = new JPanel(new FlowLayout());
+                aprenderPanelSuperior.setBackground(Color.lightGray);
                 aprenderPanelSuperior.add(aE);
                 aprenderPanelSuperior.add(fK);
                 aprenderPanelSuperior.add(lP);
@@ -56,10 +57,13 @@ public class Inicio extends JFrame {
                 aprenderPanelTotal.add(aprenderPanelSuperior, BorderLayout.NORTH);
 
                 aprenderPanelInferior = new JPanel(null);
+                aprenderPanelInferior.setBackground(Color.lightGray);
                 aprenderPanelInferior.setSize(1200,400);
 
                 JButton jugar = new JButton("Jugar");
-                jugar.setBounds(550,150,100,100);
+                jugar.setBounds(515,150,180,100);
+                jugar.setBackground(Color.orange);
+                jugar.setFont(new Font("Ink Free", Font.BOLD, 50));
                 jugar.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -114,17 +118,20 @@ public class Inicio extends JFrame {
         });
 
         desafio = new JButton("Desafio");
-        desafio.setBounds(500,300, 180, 50);
+        desafio.setFont(new Font("Ink Free", Font.BOLD, 60));
+        desafio.setBounds(462,410, 280, 90);
+        desafio.setBackground(Color.ORANGE);
         desafio.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 desafioPanel= new JPanel(null);
+                desafioPanel.setBackground(Color.lightGray);
                 desafioPanel.setSize(1200, 600);
 
-
-
                 JButton facil = new JButton("Facil");
-                facil.setBounds(500,250,180,50);
+                facil.setBounds(460,220,250,100);
+                facil.setFont(new Font("Ink Free", Font.BOLD, 60));
+                facil.setBackground(Color.orange);
                 facil.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -133,8 +140,11 @@ public class Inicio extends JFrame {
                        add(challenge);
                     }
                 });
+
                 JButton normal = new JButton("Normal");
-                normal.setBounds(500,350,180,50);
+                normal.setBounds(460,340,250,100);
+                normal.setFont(new Font("Ink Free", Font.BOLD, 60));
+                normal.setBackground(Color.orange);
                 normal.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -145,7 +155,9 @@ public class Inicio extends JFrame {
                 });
 
                 JButton dificil = new JButton("Dificil");
-                dificil.setBounds(500,450,180,50);
+                dificil.setFont(new Font("Ink Free", Font.BOLD, 60));
+                dificil.setBounds(460,460,250,100);
+                dificil.setBackground(Color.orange);
                 dificil.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -164,6 +176,7 @@ public class Inicio extends JFrame {
                 inicio.setVisible(false);
             }
         });
+
 
         regresar = new JButton("<--");
         regresar.addActionListener(new ActionListener() {
@@ -189,8 +202,8 @@ public class Inicio extends JFrame {
         });
 
         titulo = new JLabel("SignLearn");
-        titulo.setBounds(500,50,180,50);
-        titulo.setFont(new Font("MV Boli",Font.PLAIN,35));
+        titulo.setBounds(395,120,500,120);
+        titulo.setFont(new Font("Ink Free", Font.BOLD, 90));
 
 
 

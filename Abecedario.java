@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
+import javax.sound.sampled.*;
+import java.io.*;
 
 public class Abecedario {
 
@@ -38,4 +40,28 @@ public class Abecedario {
         return abc[index];
     }
 
-}
+    public static void sonidoletra(ImageIcon sign){
+
+        Character letra = Abecedario.abecedarioInvertido.get(sign);
+        try {
+            // Open an audio input stream.
+            BufferedInputStream bis=new
+                    //OJO los audios los buscara en la subcarpeta sounds, puedes cambiar el nombre de la carpeta
+                    BufferedInputStream(Abecedario.class.getResourceAsStream("/Sonidos/"+letra+".wav"));
+            AudioInputStream audioIn = AudioSystem.getAudioInputStream(bis);
+            // Get a sound clip resource.
+            Clip clip = AudioSystem.getClip();
+            // Open audio clip and load samples from the audio input stream.
+            clip.open(audioIn);
+            clip.start();
+        } catch (UnsupportedAudioFileException e) {
+            System.out.println("Audio NO soportado");
+        } catch (IOException e) {
+            System.out.println("Error de E/S");
+        } catch (LineUnavailableException e) {
+            System.out.println("Linea No disponible");
+        }
+    }
+    }
+
+
