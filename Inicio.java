@@ -6,16 +6,10 @@ import java.awt.event.ActionListener;
 public class Inicio extends JFrame {
 
     JLabel titulo;
-<<<<<<< HEAD
     JPanel inicio, aprenderPanelInferior, aprenderPanelSuperior, aprenderPanelTotal, inferior, desafioPanel;
     JButton aprender, desafio, regresar;
     Juego juego;
     Desafio challenge;
-=======
-    JPanel inicio, aprenderPanelInferior, aprenderPanelSuperior, aprenderPanelTotal, inferior;
-    JButton aprender, desafio, regresar;
-    Juego juego;
->>>>>>> f7e31ac8de5798f9074d449c2e287cf498986c36
     JRadioButton aE, fK, lP, qU, vZ;
     ButtonGroup grupo;
 
@@ -26,13 +20,10 @@ public class Inicio extends JFrame {
         inicio = new JPanel(null);
         inferior = new JPanel(new FlowLayout());
 
-<<<<<<< HEAD
 
 
 
 
-=======
->>>>>>> f7e31ac8de5798f9074d449c2e287cf498986c36
         aprender = new JButton("Aprender");
         aprender.setBounds(500,200, 180, 50);
         aprender.setFont(new Font("MV Boli",Font.PLAIN,25));
@@ -40,10 +31,6 @@ public class Inicio extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //-------------- Creacion del panel de aprender y seleccion------------------------\\
-<<<<<<< HEAD
-=======
-
->>>>>>> f7e31ac8de5798f9074d449c2e287cf498986c36
                 aprenderPanelTotal = new JPanel(new BorderLayout());
 
                 aE = new JRadioButton("A -- E", Abecedario.abecedario.get('a'));
@@ -127,7 +114,6 @@ public class Inicio extends JFrame {
         });
 
         desafio = new JButton("Desafio");
-<<<<<<< HEAD
         desafio.setBounds(500,300, 180, 50);
         desafio.addActionListener(new ActionListener() {
             @Override
@@ -201,10 +187,6 @@ public class Inicio extends JFrame {
             }
 
         });
-=======
-
-        regresar = new JButton("<--");
->>>>>>> f7e31ac8de5798f9074d449c2e287cf498986c36
 
         titulo = new JLabel("SignLearn");
         titulo.setBounds(500,50,180,50);
@@ -216,12 +198,7 @@ public class Inicio extends JFrame {
         inicio.setSize(1200, 600);
         inicio.add(aprender);
         inicio.add(titulo);
-<<<<<<< HEAD
         inicio.add(desafio);
-=======
-
-
->>>>>>> f7e31ac8de5798f9074d449c2e287cf498986c36
 
         inferior.add(regresar);
 
